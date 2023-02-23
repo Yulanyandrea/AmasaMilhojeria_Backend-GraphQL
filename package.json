@@ -1,0 +1,29 @@
+{
+  "name": "amasamilhojeria_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "ts-node-dev --respawn ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yulanyandrea/AmasaMilhojeria_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yulanyandrea/AmasaMilhojeria_Backend/issues"
+  },
+  "homepage": "https://github.com/Yulanyandrea/AmasaMilhojeria_Backend#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "volta": {
+    "node": "18.12.1",
+    "npm": "8.19.3"
+  }
+}
