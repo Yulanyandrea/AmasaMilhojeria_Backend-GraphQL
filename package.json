@@ -2,12 +2,10 @@
   "name": "amasamilhojeria_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "npm run build && node ./dist/index.js",
-    "dev": "ts-node-dev --respawn ./src/index.ts"
+    "start": "nodemon index.js",
+    "dev": "node --watch index.js"
   },
   "repository": {
     "type": "git",
@@ -21,16 +19,19 @@
   },
   "homepage": "https://github.com/Yulanyandrea/AmasaMilhojeria_Backend#readme",
   "devDependencies": {
-    "@types/node": "^18.15.5",
-    "nodemon": "^2.0.21",
-    "typescript": "^4.9.5"
+    "nodemon": "^2.0.21"
   },
   "volta": {
     "node": "18.12.1",
     "npm": "8.19.3"
   },
   "dependencies": {
-    "@apollo/server": "^4.5.0",
-    "graphql": "^16.6.0"
+    "@apollo/server": "^4.3.2",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0"
   }
 }
