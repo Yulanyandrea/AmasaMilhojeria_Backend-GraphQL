@@ -30,7 +30,7 @@ const typeDefs = `#graphql
     user: [User]
 
     "This is to see the customers by name"
-    singleCustomer(name:String!):User
+    singleCustomer(name:String! lastname:String!):User
 
     "This is to see a customer by id"
     getCustomerById(id:ID!):User
