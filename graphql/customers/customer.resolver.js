@@ -4,8 +4,13 @@ import { addCustomer,
   getSingleCustomer} from './customer.service.js';
 
 export const Query = {
- user: allCustomers,
- singleCustomer: (_, args) => {
+ user: async (_,args) => {
+  const customers = await allCustomers();
+  return customers
+
+ },
+
+ singleCustomer: async (_, args) => {
   const { name, lastname } = args
   return getSingleCustomer(name, lastname)
  },
