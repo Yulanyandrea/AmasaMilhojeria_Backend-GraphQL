@@ -1,17 +1,7 @@
-import { ApolloServer } from '@apollo/server';
-import { startStandaloneServer } from '@apollo/server/standalone';
-import typeDefs from './graphql/typeDefs.js';
-import resolvers from './graphql/resolvers.js';
+import { server } from "./app.js";
 
+const port = process.env.PORT || 8080;
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+server.listen(port,() =>{
+  console.log(`Server running 🍰🛵 at http://localhost:${port}/`)
 });
-
-const options = {
-  listen:{port: 8080},
-}
-const {url} = await startStandaloneServer(server, options);
-
-console.log(`🚀  Server ready at: ${url}`);

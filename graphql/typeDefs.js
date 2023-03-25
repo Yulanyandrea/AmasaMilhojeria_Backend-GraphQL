@@ -2,8 +2,6 @@ const typeDefs = `#graphql
 
   # This "User" type defines the queryable fields for every user in our data source.
   type User {
-    "Customer's identification"
-    id: ID!
     "customer name"
     name: String
     "customer lastname"
@@ -38,7 +36,7 @@ const typeDefs = `#graphql
 
   type Mutation{
     " Add a new customer "
-    addCustomer(input: createCustomerInput): User
+    addCustomer(input: createCustomerInput!): User!
   }
 `;
 
