@@ -11,19 +11,21 @@ export const Query = {
  },
 
  singleCustomer: async (_, args) => {
-  const { name, lastname } = args
-  return getSingleCustomer(name, lastname)
+  const user = await getSingleCustomer(args);
+  return user
  },
 
- getCustomerById: (_, args) => {
+ getCustomerById: async (_, args) => {
   const { id } = args;
-  return getCustomerById(id)
+  const user = await getCustomerById(id);
+  return user
  }
 }
 
 export const Mutation = {
-  addCustomer : (_, { input }) => {
-    return addCustomer(input);
+  addCustomer : async (_, { input }) => {
+    const user = await addCustomer(input);
+    return user;
 
   }
 
