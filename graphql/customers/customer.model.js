@@ -20,10 +20,13 @@ const CustomerSchema = new mongoose.Schema({
     type:String,
     require:true
   },
+  email:{
+    type:String,
+    require: true
+  },
   password:{
     type: String,
     required: true,
-    trim: true,
   }
 },{
     timestamps:true,

@@ -10,6 +10,9 @@ const typeDefs = `#graphql
     phone:String
     "customer address"
     address: String
+    "customer email"
+    email:String
+    password:String
   }
 
   input createCustomerInput {
@@ -17,6 +20,8 @@ const typeDefs = `#graphql
     lastname:String!
     phone:String!
     address:String!
+    email:String!
+    password:String!
 
   }
 
