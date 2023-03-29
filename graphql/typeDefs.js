@@ -25,6 +25,27 @@ const typeDefs = `#graphql
 
   }
 
+  type Milhoja {
+    "Milhoja official name"
+    milhojaName:String!
+    "Milhoja flavour"
+    taste: String!
+    "Milhoja cake"
+    sizeBig:String!
+    "Milhoja medium size"
+    sizeMedium:String!
+    "Milhoja small size"
+    sizeSmall:String!
+  }
+
+  input createMilhojaInput{
+    milhojaName:String!
+    taste: String!
+    sizeBig:String!
+    sizeMedium:String!
+    sizeSmall:String!
+  }
+
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
