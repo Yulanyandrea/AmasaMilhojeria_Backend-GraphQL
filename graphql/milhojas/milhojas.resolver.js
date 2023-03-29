@@ -23,3 +23,8 @@ export const Mutation = {
 
   }
 }
+
+export default {
+  Query,
+  Mutation
+}

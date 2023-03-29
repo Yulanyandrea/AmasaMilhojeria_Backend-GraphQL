@@ -58,11 +58,16 @@ const typeDefs = `#graphql
 
     "This is to see a customer by id"
     getCustomerById(id:ID!):User
+
+    "You can find Milhojas' details"
+    milhojas:[Milhoja]
   }
 
   type Mutation{
     " Add a new customer "
     addCustomer(input: createCustomerInput!): User!
+    "Add a new Milhoja product"
+    addMilhoja(input: createMilhojaInput!): Milhoja!
   }
 `;
 
