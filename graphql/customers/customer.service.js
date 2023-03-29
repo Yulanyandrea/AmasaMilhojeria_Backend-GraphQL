@@ -1,6 +1,6 @@
 import User from './customer.model.js'
 
-export const allCustomers =  () => {
+export const allCustomers = async () => {
   return User.find();
 };
 
@@ -19,12 +19,14 @@ export const getCustomerById = (id) =>{
 }
 
 export const addCustomer = (input) =>{
-  const { name, lastname, phone, address } = input;
+  const { name, lastname, phone, address,password,email } = input;
   const user = new User({
     name,
     lastname,
     phone,
-    address
+    address,
+    password,
+    email
   });
   return user.save();
 

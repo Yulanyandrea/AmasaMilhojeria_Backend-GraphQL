@@ -52,7 +52,7 @@ CustomerSchema.pre('save',async function(next){
 })
 
 CustomerSchema.methods.comparePassword = async function(candidatePassword){
-  const user = this;
+  const customer = this;
   return bcrypt.compare(candidatePassword, customer.password);
 }
 
@@ -61,6 +61,8 @@ CustomerSchema.virtual('profile').get(function (){
     lastname,
     address,
     phone,
+    password,
+    email,
     _id
   } = this;
 
@@ -69,6 +71,8 @@ CustomerSchema.virtual('profile').get(function (){
     lastname,
     address,
     phone,
+    email,
+    password,
     _id
   }
 })
