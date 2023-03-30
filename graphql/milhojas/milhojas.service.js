@@ -1,4 +1,4 @@
-import Milhojas from './milhojas.model';
+import Milhojas from './milhojas.model.js';
 
 export const getAllMilhojas = async () => {
   return Milhojas.find();
@@ -19,6 +19,6 @@ export const addMilhoja = (input) =>{
     sizeSmall,
 
   });
-  return Milhojas.save();
+  return milhojas.save();
 
 }

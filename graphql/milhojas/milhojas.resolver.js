@@ -1,4 +1,6 @@
-import { addMilhoja,getAllMilhojas,getMilhojasById} from './milhojas.service.js';
+import { addMilhoja,
+  getAllMilhojas,
+  getMilhojasById} from './milhojas.service.js';
 
 export const Query= {
   milhojas: async (_,args) => {
@@ -11,9 +13,6 @@ export const Query= {
     const milhojas = await getMilhojasById(id);
     return milhojas
    },
-
-
-
 }
 
 export const Mutation = {
@@ -21,7 +20,7 @@ export const Mutation = {
     const milhojas = await addMilhoja(input);
     return milhojas;
 
-  }
+   }
 }
 
 export default {

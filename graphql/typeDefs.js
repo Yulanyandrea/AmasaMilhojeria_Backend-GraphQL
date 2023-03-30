@@ -1,5 +1,18 @@
 const typeDefs = `#graphql
 
+  type Milhoja {
+    "Milhoja official name"
+    milhojaName:String!
+    "Milhoja flavour"
+    taste: String!
+    "Milhoja cake"
+    sizeBig:String!
+    "Milhoja medium size"
+    sizeMedium:String!
+    "Milhoja small size"
+    sizeSmall:String!
+  }
+
   # This "User" type defines the queryable fields for every user in our data source.
   type User {
     "customer name"
@@ -22,20 +35,6 @@ const typeDefs = `#graphql
     address:String!
     email:String!
     password:String!
-
-  }
-
-  type Milhoja {
-    "Milhoja official name"
-    milhojaName:String!
-    "Milhoja flavour"
-    taste: String!
-    "Milhoja cake"
-    sizeBig:String!
-    "Milhoja medium size"
-    sizeMedium:String!
-    "Milhoja small size"
-    sizeSmall:String!
   }
 
   input createMilhojaInput{
@@ -59,13 +58,17 @@ const typeDefs = `#graphql
     "This is to see a customer by id"
     getCustomerById(id:ID!):User
 
+    "Current customer with jwt token"
+    me: User
+
     "You can find Milhojas' details"
     milhojas:[Milhoja]
   }
 
   type Mutation{
-    " Add a new customer "
+    "Add a new customer "
     addCustomer(input: createCustomerInput!): User!
+
     "Add a new Milhoja product"
     addMilhoja(input: createMilhojaInput!): Milhoja!
   }
