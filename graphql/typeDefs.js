@@ -5,12 +5,6 @@ const typeDefs = `#graphql
     milhojaName:String!
     "Milhoja flavour"
     taste: String!
-    "Milhoja cake"
-    sizeBig:String!
-    "Milhoja medium size"
-    sizeMedium:String!
-    "Milhoja small size"
-    sizeSmall:String!
   }
 
   # This "User" type defines the queryable fields for every user in our data source.
@@ -40,9 +34,6 @@ const typeDefs = `#graphql
   input createMilhojaInput{
     milhojaName:String!
     taste: String!
-    sizeBig:String!
-    sizeMedium:String!
-    sizeSmall:String!
   }
 
   # The "Query" type is special: it lists all of the available queries that

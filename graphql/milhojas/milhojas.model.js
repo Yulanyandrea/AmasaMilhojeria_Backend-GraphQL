@@ -9,18 +9,6 @@ const MilhojasSchema = new mongoose.Schema({
     type:String,
     require:true
   },
-  sizeBig:{
-    type:String,
-    require:true
-  },
-  sizeMedium:{
-    type:String,
-    require:true
-  },
-  sizeSmall:{
-    type:String,
-    require:true
-  }
 },{
   timestamps:true
 })
