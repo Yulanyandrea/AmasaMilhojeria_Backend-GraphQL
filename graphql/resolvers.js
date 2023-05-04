@@ -3,7 +3,7 @@ import MilhojaResolvers from './milhojas/milhojas.resolver.js';
 const resolvers = {
   Query: {
     ...CustomerResolvers.Query,
-    ...CustomerResolvers.Query
+    ...MilhojaResolvers.Query
   },
 
   Mutation:{

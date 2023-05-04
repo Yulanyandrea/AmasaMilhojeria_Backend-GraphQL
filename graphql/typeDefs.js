@@ -54,6 +54,9 @@ const typeDefs = `#graphql
 
     "You can find Milhojas' details"
     milhojas:[Milhoja]
+
+    "This is to see a specific milhoja by id"
+    getMilhojasById(id:ID!):Milhoja
   }
 
   type Mutation{
