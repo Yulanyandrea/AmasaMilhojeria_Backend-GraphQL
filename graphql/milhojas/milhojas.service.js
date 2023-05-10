@@ -10,13 +10,12 @@ export const getMilhojasById = (id) =>{
 }
 
 export const addMilhoja = (input) =>{
-  const { milhojaName, taste, sizeBig, sizeMedium,sizeSmall } = input;
+  const { milhojaName, taste, detail,image} = input;
   const milhojas = new Milhojas({
     milhojaName,
     taste,
-    sizeBig,
-    sizeMedium,
-    sizeSmall,
+    detail,
+    image
 
   });
   return milhojas.save();
