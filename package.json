@@ -28,9 +28,11 @@
   "dependencies": {
     "@apollo/server": "^4.3.2",
     "bcrypt": "^5.1.0",
+    "cloudinary": "^1.36.4",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
+    "graphql-upload": "^16.0.2",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.1.0",
     "mongoose": "^6.10.4"
