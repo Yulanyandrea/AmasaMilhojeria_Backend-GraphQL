@@ -2,6 +2,8 @@ import { addMilhoja,
   getAllMilhojas,
   getMilhojasById} from './milhojas.service.js';
 
+import { uploadImage } from '../../upload/upload.services.js';
+
 export const Query= {
   milhojas: async (_,args) => {
     const milhojas = await getAllMilhojas();
@@ -16,12 +18,18 @@ export const Query= {
 }
 
 export const Mutation = {
-  addMilhoja: async(_, { input }) => {
-    const milhojas = await addMilhoja(input);
-    return milhojas;
+  addMilhoja: async(_, { input,image }) => {
 
-   }
-}
+    const milhojas = await addMilhoja(input);
+    const cloudinaryResponse = await uploadImage(image);
+    milhojas.image = cloudinaryResponse.secure_url;
+    await milhojas.save();
+    return milhojas;
+      }
+    }
+
+
+
 
 export default {
   Query,
