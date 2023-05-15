@@ -1,4 +1,4 @@
-import { addMilhoja,
+import { addMilhojaProduct,
   getAllMilhojas,
   getMilhojasById} from './milhojas.service.js';
 
@@ -18,15 +18,15 @@ export const Query= {
 }
 
 export const Mutation = {
-  addMilhoja: async(_, { input,image }) => {
+  addMilhoja: async(_, { input,file }) => {
 
-    const milhojas = await addMilhoja(input);
-    const cloudinaryResponse = await uploadImage(image);
-    milhojas.image = cloudinaryResponse.secure_url;
+    const milhojas = await addMilhojaProduct(input);
+    milhojas.image  = await uploadImage(file);
+    milhojas.image
     await milhojas.save();
     return milhojas;
-      }
-    }
+  }
+}
 
 
 

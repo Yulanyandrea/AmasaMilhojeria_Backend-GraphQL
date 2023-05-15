@@ -9,7 +9,7 @@ export const getMilhojasById = (id) =>{
 
 }
 
-export const addMilhoja = (input) =>{
+export const addMilhojaProduct = (input) =>{
   const { milhojaName, taste, detail,image} = input;
   const milhojas = new Milhojas({
     milhojaName,

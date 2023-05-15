@@ -11,16 +11,16 @@ cloudinary.config({
 
 export async function uploadImage(image) {
   try {
-    const result = await cloudinary.uploader.upload(image, {
+    const result = await cloudinary.uploader.upload(image.path, {
       folder: 'Amasa milhojeria',
       use_filename: true,
       unique_filename: false,
     });
 
-    return result;
+    return result.secure_url;
   } catch (error) {
     console.log(error);
-    throw new Error('Error uploading image');
+    return `Image could not be uploaded:${error.message}`;
   }
 }
 
